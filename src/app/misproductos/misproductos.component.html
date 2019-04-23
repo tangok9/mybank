@@ -1,0 +1,14 @@
+<div *ngIf="show_loader == true" class="loaderWrapper">
+<img class="loader" src="../../assets/images/loader.gif">
+</div>
+
+<div class="row">
+  <div class="border-title">
+    <h6>{{titulo}}</h6>
+  </div>
+</div>
+<producto [listaProducto]="listaProducto" [titulo]="tituloHijo" [tituloDos]="tituloHijoDos"></producto>
+<hr>
+<producto [listaProducto]="listaProducto2" [titulo]="tituloHijo2" [tituloDos]="tituloHijoDos2"></producto>
+  
+

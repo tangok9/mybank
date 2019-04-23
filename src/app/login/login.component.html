@@ -1,0 +1,26 @@
+<div class="col-12 center-x">
+  <br><br>
+  <img src="../../assets/images/logo.JPG"/>
+  <br><br>
+ <h1> My <b>{{title}}</b></h1>
+  <br/><br/><br/><br/>
+  <form #loginForm="ngForm" (ngSubmit)="onSubmit()" class="col-xs-12 col-sm-12">
+    <div class="alert alert-success" *ngIf="estatus == 'Error de autenticación'" >
+      {{estatus}}
+    </div>
+    
+    <p>
+      <input type="email" name="correo" #correo="ngModel" [(ngModel)]="user.correo" class=" form-control" required placeholder="Correo Electronico" />
+      <span *ngIf="!correo.valid && correo.touched" class="error">
+        El correo es requerido
+      </span>
+    </p>
+    <p>
+      <input type="password" name="password" #password="ngModel" [(ngModel)]="user.password" class="form-control" required placeholder="Contraseña"/>
+      <span *ngIf="!password.valid && password.touched" class="error">
+        La Contraseñaes requerido
+      </span>
+    </p>
+    <input type="submit" value="Entrar" class="btn btn-success col-12">
+  </form>
+</div>

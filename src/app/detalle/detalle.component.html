@@ -1,0 +1,89 @@
+<div *ngIf="show_loader == true" class="loaderWrapper">
+    <img class="loader" src="../../assets/images/loader.gif">
+</div>
+
+<div class="row">
+  <div class="border-title flex-container">
+
+    <div class="arrow-back" (click)="back();">
+      <i class="fas fa-arrow-circle-left"></i>
+    </div>
+    <h6 class="titulo-detalle">{{titulo}}</h6>
+  </div>
+</div>
+<div class="body-detalle">
+<div class="row">
+  <div class="col-8 title-2">
+     {{ alias }}
+  </div>
+  <div class="col-4">
+    <i class="fas fa-edit"></i>
+  </div>
+</div>
+<br>
+
+<div class="row">
+  <div class="col-6 title-2">
+    Número de cuenta:
+  </div>
+  <div class="col-6 title-3">
+    {{numeroCuenta}}
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-6 title-2">
+    Cuenta Cliente:
+  </div>
+  <div class="col-6 title-3">
+    {{cuentaCliente}}
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-6 title-2">
+    IBAN:
+  </div>
+  <div class="col-6 title-3">
+    {{ibam}}
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-6 title-2">
+    Tipo Cuenta:
+  </div>
+  <div class="col-6 title-3">
+    {{tipoCuenta}}
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-6 title-2">
+     Estado:
+  </div>
+  <div class="col-6 title-3">
+    {{estado}}
+  </div>
+</div>
+<hr>
+
+<div class="row">
+  <div class="col-6 title-2">
+    Balance disponible:
+  </div>
+  <div class="col-6 title-3">
+    {{simboloMoneda}} {{balance}} {{moneda}}
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-6 title-2">
+    Monto en transito:
+  </div>
+  <div class="col-6 title-3">
+    {{montoTransito}}
+  </div>
+</div>
+<br>
+</div>

@@ -1,0 +1,59 @@
+<hr>
+<h1>{{ titulo }}</h1>
+
+<strong>Empreado estrella:</strong>
+<ul>
+</ul>
+<hr>
+<br>
+    <h3>Selector de colores:</h3>
+    <button (click)="logColorSeleccionado()">Mostrar seleccionado</button>
+    <input type="text" [(ngModel)]="color_seleccionado" />
+<pre [style.border]="color_seleccionado == 'red' ? '5px solid black' : '1px solid white' ">
+   Color actual: {{ color_seleccionado }}
+</pre>
+
+    <div [ngStyle]="{
+        'background' : color_seleccionado,
+        'width': '200px',
+        'height': '300px'
+        }"></div>
+<br>
+<hr>
+<div *ngIf="trabajador_externo == true">
+  <button (click)="cambiarExterno(false)">Mostrar empleados</button>
+  <ul>
+    <li>{{ trabajadores[0].nombre }}</li>
+    <li>{{ trabajadores[0].edad }}</li>
+    <li>{{ trabajadores[0].cargo }}</li>
+    <li *ngIf="trabajadores[0].contratado == false">No esta contratado</li>
+    <li *ngIf="trabajadores[0].contratado == true">Si esta contratado</li>
+  </ul>
+</div>
+
+<div *ngIf="trabajador_externo == false">
+  <button (click)="cambiarExterno(true)">Mostrar empleados</button>
+  <ul>
+    <li>{{ trabajadores[1].nombre }}</li>
+    <li>{{ trabajadores[1].edad }}</li>
+    <li>{{ trabajadores[1].cargo }}</li>
+    <li *ngIf="trabajadores[1].contratado == false">No esta contratado</li>
+    <li *ngIf="trabajadores[1].contratado == true">Si esta contratado</li>
+  </ul>
+</div>
+<hr>
+<h3> Listado de emplados</h3>
+<ul>
+  <li *ngFor="let empleado of trabajadores">
+      Empleado
+    <ul>
+      <li>{{ empleado.nombre }}</li>
+      <li>{{ empleado.edad }}</li>
+      <li>{{ empleado.cargo }}</li>
+      <li *ngIf="empleado.contratado == false">No esta contratado</li>
+      <li *ngIf="empleado.contratado == true">Si esta contratado</li>
+    </ul>
+  </li>
+</ul>
+
+

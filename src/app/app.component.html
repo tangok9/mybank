@@ -1,0 +1,25 @@
+
+<header>
+  <img id="logo" class="logo hide" src="../../assets/images/mini-logo.JPG"/>
+  <div id="logOut" class="log-out hide" (click)="logOut();">
+    <i class="fas fa-sign-out-alt"></i>
+  </div>
+</header>
+<div class="container">
+ <!-- <div class="row">
+    <div class="col-sm-12">
+      <nav class="col-sm-12">
+        <a [routerLink]="['/misproductos']">Mis Productos</a>
+        <br>
+        <a [routerLink]="['/detalle']">Detalle</a>
+        <br>
+        <a [routerLink]="['/fruta']">Fruta</a>
+        <br>
+        <a [routerLink]="['/empleado']">Empleado</a>
+      </nav>
+    </div>
+  </div> -->
+  <div class="row">
+    <router-outlet></router-outlet>
+  </div>
+</div>
